@@ -8,7 +8,7 @@
 :root{--bg:#f3f6fb;--card:#fff;--ink:#172033;--muted:#64748b;--line:#e2e8f0;--blue:#2457d6;--blue-dark:#1743aa;--blue2:#eaf0ff;--green:#16834a;--red:#c62828;--amber:#a45b00}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0,#eaf0ff 0,transparent 32%),var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
 header{background:linear-gradient(115deg,#101f40,#2457d6);color:white;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 4px 18px #172e5c25}
-.brand{font-weight:850;letter-spacing:.4px;display:flex;align-items:center;gap:11px}.brand:before{content:"NT";display:grid;place-items:center;width:34px;height:34px;border:1px solid #ffffff55;border-radius:10px;background:#ffffff18;font-size:12px;letter-spacing:0}.brand small{display:block;font-weight:500;color:#d9e3ff;font-size:12px}
+.brand{font-weight:850;letter-spacing:.4px;display:flex;align-items:center;gap:11px}.brand small{display:block;font-weight:500;color:#d9e3ff;font-size:12px}.logo{display:grid;place-items:center;width:46px;height:46px;border:1px solid #ffffff55;border-radius:14px;background:#ffffff18;box-shadow:0 6px 16px #071a432e}.logo svg{width:37px;height:37px}
 .pill{border:1px solid #60739c;border-radius:999px;padding:6px 12px;font-size:12px}
 main{max-width:1120px;margin:32px auto;padding:0 18px}.panel{background:var(--card);border:1px solid #dfe6f1;border-radius:18px;padding:24px;box-shadow:0 12px 32px #1c315012}
 h1{font-size:clamp(25px,4vw,36px);line-height:1.15;margin:8px 0 12px}h2{margin:0 0 14px;font-size:21px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:1.4fr .8fr;gap:20px}
@@ -24,7 +24,7 @@ button{border:0;border-radius:10px;padding:12px 17px;background:var(--blue);colo
 </style>
 </head>
 <body>
-<header><div class="brand">NITIN TEST SERIES <small>B.Tech Biotechnology · Semester I · Practice CBT</small></div><div class="pill">Introduction to Biotechnology</div></header>
+<header><div class="brand"><span class="logo" aria-label="Nitin Test Series logo"><svg viewBox="0 0 48 48" role="img"><defs><linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8dd8ff"/><stop offset="1" stop-color="#b6a4ff"/></linearGradient></defs><circle cx="24" cy="24" r="20" fill="url(#logoGradient)" opacity=".18"/><path d="M16 11c11 5 11 21 0 26M32 11c-11 5-11 21 0 26M17 16h14M15 24h18M17 32h14" fill="none" stroke="url(#logoGradient)" stroke-width="2.6" stroke-linecap="round"/><circle cx="24" cy="24" r="3.2" fill="#fff"/><text x="24" y="46" text-anchor="middle" fill="#fff" font-size="7" font-weight="800" font-family="Arial">NT</text></svg></span><span>NITIN TEST SERIES <small>B.Tech Biotechnology · Semester I · Practice CBT</small></span></div><div class="pill">Introduction to Biotechnology</div></header>
 <main>
 <section id="welcome" class="grid">
  <div class="panel">
