@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Biotechnology | CBT Examination</title>
+<style>
+:root{--bg:#f3f6fb;--card:#fff;--ink:#172033;--muted:#64748b;--line:#e2e8f0;--blue:#2457d6;--blue-dark:#1743aa;--blue2:#eaf0ff;--green:#16834a;--red:#c62828;--amber:#a45b00}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0,#eaf0ff 0,transparent 32%),var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header{background:linear-gradient(115deg,#101f40,#2457d6);color:white;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 4px 18px #172e5c25}
+.brand{font-weight:850;letter-spacing:.4px;display:flex;align-items:center;gap:11px}.brand:before{content:"NT";display:grid;place-items:center;width:34px;height:34px;border:1px solid #ffffff55;border-radius:10px;background:#ffffff18;font-size:12px;letter-spacing:0}.brand small{display:block;font-weight:500;color:#d9e3ff;font-size:12px}
+.pill{border:1px solid #60739c;border-radius:999px;padding:6px 12px;font-size:12px}
+main{max-width:1120px;margin:32px auto;padding:0 18px}.panel{background:var(--card);border:1px solid #dfe6f1;border-radius:18px;padding:24px;box-shadow:0 12px 32px #1c315012}
+h1{font-size:clamp(25px,4vw,36px);line-height:1.15;margin:8px 0 12px}h2{margin:0 0 14px;font-size:21px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:1.4fr .8fr;gap:20px}
+ .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.stat{background:linear-gradient(145deg,#fafcff,#f4f7fc);border:1px solid var(--line);padding:14px;border-radius:12px}.stat b{display:block;font-size:22px}
+ .features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.feature{display:flex;gap:9px;align-items:flex-start;background:#f8faff;border:1px solid #dfe8fb;border-radius:11px;padding:11px;font-size:13px}.feature i{display:grid;place-items:center;flex:0 0 22px;height:22px;border-radius:50%;background:#dce8ff;color:#1743aa;font-style:normal;font-weight:800}
+label{display:block;font-weight:700;margin:14px 0 6px}input{width:100%;padding:13px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;transition:border-color .2s,box-shadow .2s}input:focus{outline:none;border-color:#7595ea;box-shadow:0 0 0 4px #2457d61c}
+button{border:0;border-radius:10px;padding:12px 17px;background:var(--blue);color:#fff;font:700 14px inherit;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}button:hover:not(:disabled){background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 5px 14px #2457d633}button:disabled{opacity:.45;cursor:not-allowed}.secondary{background:#e9eef8;color:#1c3158}.secondary:hover:not(:disabled){background:#dce6fa;color:#173b91}.danger{background:#b42318}.startbtn{width:100%;margin-top:18px;padding:15px}
+.notice{background:#fff8ea;border:1px solid #f1d6a8;color:#704300;padding:13px;border-radius:12px;font-size:13px}
+.exam{display:none}.examtop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}.timer{font-size:24px;font-weight:850;font-variant-numeric:tabular-nums;background:#fff1f0;color:#a61b1b;padding:8px 14px;border-radius:10px}.progress{height:8px;background:#e8edf5;border-radius:20px;overflow:hidden;margin:10px 0 20px}.progress>div{height:100%;background:var(--blue);width:0}
+.examgrid{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:18px}.qhead{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}.qtext{font-size:20px;font-weight:750;margin:18px 0}.option{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);padding:13px;border-radius:12px;margin:9px 0;cursor:pointer}.option:hover{border-color:#8da8ed;background:#f8faff}.option input{width:auto;margin-top:4px;accent-color:var(--blue)}.navgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.navgrid button{padding:9px 0;background:#edf1f7;color:#334155}.navgrid button.answered{background:#dce8ff;color:#1743aa}.navgrid button.current{outline:2px solid var(--blue)}.legend{font-size:12px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;background:#dce8ff}.actions{display:flex;justify-content:space-between;gap:10px;margin-top:22px}.sidecard{height:max-content}.resultscore{font-size:54px;font-weight:900;letter-spacing:-2px}.resultgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}.resultgrid .stat b{font-size:23px}.reportgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.reportrow{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:8px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0;font-size:13px}.reportrow strong{font-size:14px}.review{border-top:1px solid var(--line);padding:14px 0}.correct{color:var(--green)}.wrong{color:var(--red)}.pass{background:#e8f7ef;border-color:#b8e3c9;color:#12643a}.fail{background:#fff0f0;border-color:#f0bcbc;color:#9e1c1c}.hidden{display:none!important}
+@media(max-width:800px){header{padding:15px 16px}.grid,.examgrid{grid-template-columns:1fr}.resultgrid{grid-template-columns:repeat(2,1fr)}main{margin:16px auto;padding:0 12px}.panel{padding:18px}.sidecard{order:2}}
+@media(max-width:560px){body{font-size:14px;overflow-x:hidden}header{align-items:flex-start}.brand{font-size:14px}.brand small{font-size:11px}.pill{font-size:11px;padding:5px 9px}h1{font-size:27px}h2{font-size:19px}.panel{padding:15px;border-radius:14px}.stats{grid-template-columns:1fr 1fr;gap:8px;margin:15px 0}.features{grid-template-columns:1fr}.stat{padding:11px}.stat b{font-size:19px}.qtext{font-size:18px;margin:14px 0}.option{padding:12px 10px;margin:8px 0}.actions{flex-direction:column-reverse}.actions button,.startbtn{width:100%;min-height:46px}.navgrid{grid-template-columns:repeat(5,1fr);gap:6px}.navgrid button{min-height:40px;padding:7px 0}.resultscore{font-size:46px}.reportgrid{grid-template-columns:1fr}.reportrow{grid-template-columns:1.45fr .8fr .7fr .8fr;gap:4px;font-size:12px}.reportrow strong{font-size:12px}#resultMeta{overflow-wrap:anywhere}.examtop{align-items:flex-start}.timer{font-size:21px;padding:7px 10px}}
+</style>
+</head>
+<body>
+<header><div class="brand">NITIN TEST SERIES <small>B.Tech Biotechnology · Semester I · Practice CBT</small></div><div class="pill">Introduction to Biotechnology</div></header>
+<main>
+<section id="welcome" class="grid">
+ <div class="panel">
+  <div class="muted">COMPUTER-BASED TEST</div><h1>Introduction to Biotechnology</h1>
+  <p class="muted">A 100-question multiple-choice semester examination covering biotechnology fundamentals, biomolecules and enzymes, microbiology and fermentation, chromatography, biological databases and genomics.</p>
+  <div class="stats">
+   <div class="stat"><b>100</b><span class="muted">Questions</span></div>
+   <div class="stat"><b>200</b><span class="muted">Maximum marks</span></div>
+   <div class="stat"><b>120 min</b><span class="muted">Time limit</span></div>
+  </div>
+  <div class="features">
+   <div class="feature"><i>1</i><span><b>Auto-submit</b><br><span class="muted">Time ends, test submits automatically.</span></span></div>
+   <div class="feature"><i>2</i><span><b>Answer review</b><br><span class="muted">Review every answer after submission.</span></span></div>
+   <div class="feature"><i>3</i><span><b>Negative marking</b><br><span class="muted">Wrong answers receive −0.5 marks.</span></span></div>
+  </div>
+  <label for="student">Student name</label><input id="student" placeholder="Enter your full name" autocomplete="name">
+  <label for="accessCode">Test access code</label><input id="accessCode" type="password" placeholder="Enter code provided by teacher" autocomplete="off">
+  <p class="muted" style="font-size:12px">A valid access code is required before the paper can start.</p>
+  <button class="startbtn" id="start">Start examination →</button>
+ </div>
+ <aside class="panel">
+  <h2>Marking scheme</h2>
+  <div class="stats" style="grid-template-columns:1fr 1fr">
+   <div class="stat"><b class="correct">+2</b><span class="muted">Correct</span></div>
+   <div class="stat"><b class="wrong">−0.5</b><span class="muted">Incorrect</span></div>
+   <div class="stat"><b>0</b><span class="muted">Unattempted</span></div>
+   <div class="stat"><b>200</b><span class="muted">Maximum</span></div>
+  </div>
+  <div class="notice"><b>Tab-switch rule:</b> If the test page becomes hidden (for example, you switch browser tabs or minimize the browser), the test is automatically submitted as FAILED. This browser check is deterrence, not tamper-proof proctoring.</div>
+  <p class="muted" style="font-size:13px">Other rules: one attempt per page session; timer auto-submits; unanswered questions receive zero; negative marks apply only to wrong answers.</p>
+ </aside>
+</section>
+
+<section id="exam" class="exam">
+ <div class="examtop"><div><b id="studentLabel"></b><div class="muted">Nitin Test Series</div></div><div class="timer" id="timer">120:00</div></div>
+ <div class="progress"><div id="progressBar"></div></div>
+ <div class="examgrid">
+  <div class="panel">
+   <div class="qhead"><span id="qnumber">Question 1 of 100</span><span>+2 / −0.5</span></div>
+   <div class="qtext" id="question"></div>
+   <div id="options"></div>
+   <div class="actions"><button class="secondary" id="prev">← Previous</button><button id="next">Save &amp; next →</button></div>
+  </div>
+  <aside class="panel sidecard">
+   <h2>Question palette</h2><div class="navgrid" id="nav"></div>
+   <div class="legend"><span><i class="dot"></i>Answered</span><span>Grey: unanswered</span></div>
+   <p class="muted" id="answeredCount">0 / 100 answered</p>
+   <button class="danger" style="width:100%" id="submit">Submit test</button>
+  </aside>
+ </div>
+</section>
+<section id="results" class="panel hidden">
+ <div class="muted">EXAMINATION RESULT</div><h1 id="resultTitle">Test submitted</h1><div class="resultscore" id="score">0</div><div class="muted">Marks out of 200</div>
+ <div class="resultgrid">
+  <div class="stat"><b id="correctCount" class="correct">0</b><span class="muted">Correct</span></div>
+  <div class="stat"><b id="wrongCount" class="wrong">0</b><span class="muted">Incorrect</span></div>
+  <div class="stat"><b id="skipCount">0</b><span class="muted">Unattempted</span></div>
+  <div class="stat"><b id="percent">0%</b><span class="muted">Percentage</span></div>
+ </div>
+ <div class="notice" id="passStatus"></div>
+ <div id="failureReason" class="notice hidden"></div>
+ <p class="muted" id="resultMeta"></p>
+ <div style="display:flex;gap:10px;flex-wrap:wrap"><button id="reviewBtn" class="secondary">Review answers</button><button id="printBtn">Print / Save result</button><button id="downloadBtn" class="secondary">Download report file</button><button id="newTestBtn" class="secondary">Start new test series</button></div>
+ <h2 style="margin-top:24px">Performance report</h2>
+ <div class="reportgrid">
+  <div class="stat"><b id="grade">-</b><span class="muted">Grade</span></div>
+  <div class="stat"><b id="accuracy">0%</b><span class="muted">Attempt accuracy</span></div>
+ </div>
+ <div class="reportrow"><strong>Topic</strong><strong>Correct</strong><strong>Wrong</strong><strong>Accuracy</strong></div>
+ <div id="topicReport"></div>
+ <div id="review" class="hidden" style="margin-top:20px"><h2>Answer review</h2><div id="reviewList"></div></div>
+</section>
+</main>
+<script>
+let questions = [
+["Biotechnology is best defined as: ",["Use of machines in factories","Application of living organisms, cells or biological systems to make useful products","Study of rocks and minerals","Study of stars"],1],
+["Which is a traditional example of biotechnology?",["Bread making using yeast","Petroleum refining","Metal casting","Plastic moulding"],0],
+["Biochemical engineering mainly applies engineering principles to:",["Biological processes and products","Astronomical observations","Geological mapping","Weather forecasting"],0],
+["Which is an example of biotechnology in medicine?",["Production of recombinant human insulin","Extraction of iron ore","Manufacture of cement","Burning coal"],0],
+["A genetically modified organism (GMO) is an organism whose:",["Body temperature is changed","Genetic material has been deliberately altered using genetic engineering","Diet is changed","Habitat is changed"],1],
+["Biosafety primarily aims to:",["Increase mutation rates","Manage risks to human health and the environment","Stop all scientific research","Replace laboratory equipment"],1],
+["Which field uses microbes to treat wastewater?",["Environmental biotechnology","Astrophysics","Metallurgy","Seismology"],0],
+["Which biomolecule is commonly used as an immediate energy source?",["Carbohydrate","DNA","Steroid hormone","Enzyme"],0],
+["The basic building blocks of proteins are:",["Nucleotides","Amino acids","Monosaccharides","Fatty acids"],1],
+["Amino acids in proteins are joined mainly by:",["Glycosidic bonds","Peptide bonds","Hydrogen bonds only","Phosphodiester bonds"],1],
+["A common storage polysaccharide in plants is:",["Glycogen","Starch","Cellulose","Chitin"],1],
+["The major structural component of most biological membranes is:",["Phospholipid","Starch","Cellulose","Glycogen"],0],
+["Which statement about enzymes is correct?",["They are biological catalysts","They are consumed permanently in every reaction","They increase activation energy","They work only at boiling temperature"],0],
+["The region of an enzyme where substrate binds is called the:",["Active site","Promoter","Centromere","Origin of replication"],0],
+["Enzymes speed up reactions mainly by:",["Increasing product energy","Lowering activation energy","Changing the reaction's overall free-energy change","Being converted into substrate"],1],
+["An enzyme that transfers a phosphate group is generally classified as a:",["Kinase (transferase)","Lipase","Protease","Nuclease"],0],
+["A protease catalyses the breakdown of:",["Proteins","Lipids","Starch","DNA only"],0],
+["Enzyme activity is commonly affected by:",["Temperature and pH","The colour of the container only","The laboratory wall material","The brand of notebook"],0],
+["Compared with many chemical catalysts, enzymes are usually:",["Highly substrate-specific","Always inorganic","Never affected by pH","Active only in strong acids"],0],
+["A common first step in enzyme purification is:",["Cell disruption or extraction from source material","Genome duplication","Photosynthesis","DNA sequencing"],0],
+["Microbiology is the study of:",["Microorganisms","Planets","Minerals","Weather systems"],0],
+["Which organism is a fungus commonly used in baking and fermentation?",["Saccharomyces cerevisiae","Escherichia coli phage","Amoeba proteus","Plasmodium falciparum"],0],
+["Bacteria are generally:",["Prokaryotic cells","Multicellular animals","Acellular crystals","Plants with chloroplasts"],0],
+["Which group includes organisms such as Amoeba?",["Protozoa","Mammals","Conifers","Arthropods"],0],
+["Viruses are described as acellular because they:",["Lack cellular organization","Have a nucleus","Contain mitochondria","Divide by mitosis"],0],
+["The scientist widely regarded as a founder of modern microbiology through work on fermentation and pasteurization is:",["Louis Pasteur","Gregor Mendel","Charles Darwin","Robert Hooke"],0],
+["In industrial fermentation, microorganisms are commonly provided with:",["A suitable nutrient medium and controlled conditions","Only dry sand","No carbon source","An absence of all water"],0],
+["A bioreactor is used to:",["Provide controlled conditions for biological production","Measure earthquakes","Store computer files","Separate metal ores"],0],
+["Which product can be made by microbial fermentation?",["Ethanol","Granite","Glass","Petrol by simple yeast fermentation"],0],
+["The impeller in a stirred-tank bioreactor mainly helps with:",["Mixing the culture broth","Sequencing DNA","Measuring gene expression directly","Filtering computer signals"],0],
+["A sparger in a typical aerobic bioreactor is used to:",["Introduce air or gas into the culture","Remove chromosomes","Add light to DNA","Measure protein mass"],0],
+["Chromatography is primarily a technique for:",["Separating mixture components","Amplifying DNA","Counting chromosomes","Growing whole plants"],0],
+["In chromatography, the stationary phase:",["Remains fixed in place","Always moves faster than the mobile phase","Is always a gas","Must be a living cell"],0],
+["In paper chromatography, the mobile phase is the:",["Solvent that moves through the paper","Paper itself","Sample origin mark","Glass container"],0],
+["The Rf value in planar chromatography is calculated as:",["Distance travelled by solute divided by distance travelled by solvent front","Solvent distance divided by sample mass","Sample mass divided by solvent volume","Time multiplied by temperature"],0],
+["Bioinformatics combines biology with:",["Computing and information analysis","Civil engineering only","Astronomy only","Mining engineering"],0],
+["GenBank is primarily a database of:",["Nucleotide sequences","Protein 3D structures only","Weather observations","Clinical appointments"],0],
+["UniProt is best known as a resource for:",["Protein sequence and functional information","Nucleotide sequence submissions only","Satellite images","Chemical safety sheets"],0],
+["The Protein Data Bank (PDB) stores:",["Three-dimensional structures of biological macromolecules","Only plant photographs","Weather records","Patient phone numbers"],0],
+["A genome is:",["The complete genetic material of an organism","One amino acid","A type of microscope","A cell membrane lipid"],0],
+["A sequence alignment is used to:",["Compare DNA, RNA or protein sequences","Separate cells by size only","Measure blood pressure","Grow bacteria"],0],
+["BLAST is commonly used to:",["Search biological sequence databases for similar sequences","Sterilize laboratory equipment","Measure enzyme temperature","Produce ethanol"],0],
+["A SNP is a variation involving:",["A single nucleotide position","An entire organ","A whole species","A complete chromosome set only"],0],
+["Comparative genomics involves:",["Comparing genome features across organisms","Comparing laboratory furniture","Comparing microscope brands","Counting only visible cells"],0],
+["Gene prediction aims to identify:",["Likely genes within genomic DNA sequence","The age of a fossil","The temperature of a bioreactor","The colour of a protein solution"],0],
+["FASTA is commonly used as a format for:",["Biological sequence data","Laboratory invoices","Microscope calibration certificates","Cell culture media recipes only"],0],
+["The Human Genome Project was an international effort to:",["Determine and analyse the human genome sequence","Create the first microscope","Invent fermentation","Sequence every protein structure"],0],
+["A restriction enzyme typically:",["Cuts DNA at particular recognition sequences","Joins amino acids","Breaks down starch","Makes ATP in mitochondria"],0],
+["PCR is a technique used to:",["Amplify a selected DNA region","Separate proteins by charge only","Grow whole organisms from soil","Measure lipid melting point"],0],
+["A plasmid commonly used as a cloning vector is:",["A small, usually circular DNA molecule that can replicate in a host","A type of ribosome","A membrane lipid","A fungal spore"],0]
+];
+const additionalQuestions = [
+  ["Biotechnology is best defined as:", ["Using living organisms or biological systems to make useful products","Study of rocks","Study of planets","Manufacture of machines"],0],
+  ["Which is a traditional example of biotechnology?",["Bread making using yeast","Petroleum refining","Metal casting","Glass blowing"],0],
+  ["Biochemical engineering mainly applies engineering principles to:",["Biological processes and products","Weather prediction","Mining","Astronomy"],0],
+  ["Which is a medical application of biotechnology?",["Recombinant insulin production","Cement manufacture","Iron smelting","Coal mining"],0],
+  ["A genetically modified organism (GMO) has:",["Genetic material deliberately altered using genetic engineering","Only a changed diet","A different habitat","No DNA"],0],
+  ["Biosafety aims primarily to:",["Manage potential risks to health and the environment","Increase mutation rates","Stop all research","Replace laboratory instruments"],0],
+  ["Which is an environmental biotechnology application?",["Microbial wastewater treatment","Making steel","Petroleum drilling","Glass polishing"],0],
+  ["Which biomolecule is a major immediate energy source?",["Carbohydrate","DNA","Enzyme","Steroid"],0],
+  ["Proteins are polymers of:",["Amino acids","Nucleotides","Monosaccharides","Fatty acids only"],0],
+  ["Amino acids in proteins are joined by:",["Peptide bonds","Glycosidic bonds","Phosphodiester bonds","Ester bonds"],0],
+  ["The main storage polysaccharide in plants is:",["Starch","Glycogen","Chitin","Peptidoglycan"],0],
+  ["Cellulose is primarily a:",["Structural polysaccharide in plant cell walls","Storage protein","Membrane lipid","Nucleic acid"],0],
+  ["The major lipid component of many cell membranes is:",["Phospholipid","Starch","Cellulose","Glycogen"],0],
+  ["Triglycerides are composed mainly of:",["Glycerol and three fatty acids","Amino acids","Nucleotides","Glucose units"],0],
+  ["Which biomolecule stores hereditary information?",["Nucleic acid","Lipid","Carbohydrate","Wax"],0],
+  ["The monomer unit of nucleic acids is:",["Nucleotide","Amino acid","Fatty acid","Monosaccharide"],0],
+  ["Enzymes are generally:",["Biological catalysts","Consumed as fuel in every reaction","Always inorganic","Products of DNA replication only"],0],
+  ["The substrate binds to an enzyme at its:",["Active site","Promoter","Centromere","Ribosome"],0],
+  ["Enzymes accelerate reactions mainly by:",["Lowering activation energy","Increasing activation energy","Changing equilibrium permanently","Being consumed"],0],
+  ["The molecule on which an enzyme acts is called:",["Substrate","Product","Inhibitor only","Cofactor only"],0],
+  ["A protease catalyses the breakdown of:",["Proteins","Lipids","Starch","DNA only"],0],
+  ["A lipase acts on:",["Lipids","Proteins","DNA","Cellulose"],0],
+  ["Amylase catalyses the breakdown of:",["Starch","Proteins","Fats","DNA"],0],
+  ["Kinases are generally classified as:",["Transferases","Hydrolases","Lyases","Ligases"],0],
+  ["Enzymes that catalyse oxidation-reduction reactions are:",["Oxidoreductases","Isomerases","Ligases","Hydrolases"],0],
+  ["An enzyme's activity is commonly affected by:",["Temperature and pH","Notebook colour","Room number","Glass shape only"],0],
+  ["Very high temperature may reduce enzyme activity because it can:",["Denature the enzyme","Create more active sites permanently","Turn protein into DNA","Stop all molecular motion"],0],
+  ["The optimum pH of an enzyme is the pH at which it:",["Shows maximum activity under specified conditions","Is always 7","Is completely destroyed","Stops binding substrate"],0],
+  ["Enzyme specificity means an enzyme:",["Acts on particular substrate(s) or reaction(s)","Acts on every molecule equally","Works only in darkness","Cannot bind a substrate"],0],
+  ["A cofactor is:",["A non-protein component required by some enzymes","Always the substrate","A type of carbohydrate","A DNA sequence"],0],
+  ["A coenzyme is commonly:",["An organic cofactor","A cell wall","A chromosome","A polysaccharide"],0],
+  ["Competitive inhibition occurs when an inhibitor:",["Competes with substrate for the active site","Destroys all enzymes","Binds only to DNA","Increases substrate concentration"],0],
+  ["Enzyme purification is performed to:",["Separate an enzyme from other components in its source","Make DNA replicate","Produce whole organisms","Change its genetic code"],0],
+  ["Which is commonly used to estimate protein concentration?",["Bradford assay","Gram staining","PCR","Gel filtration of DNA only"],0],
+  ["Compared with many chemical catalysts, enzymes are often:",["Highly specific","Always inorganic","Unaffected by temperature","Active only at extreme pH"],0],
+  ["A chemical catalyst generally differs from an enzyme because enzymes are:",["Biological macromolecules with high specificity","Always metals","Never affected by pH","Consumed in every reaction"],0],
+  ["Which is an example of a GM crop trait?",["Insect resistance","Ability to photosynthesize without light","No genetic material","Permanent absence of cells"],0],
+  ["The term 'biosafety containment' refers to:",["Practices and facilities that reduce exposure to biological hazards","Increasing exposure","Removing all safety rules","Only wearing ordinary clothing"],0],
+  ["Which product can be manufactured using recombinant DNA technology?",["Human insulin","Granite","Copper wire","Glass"],0],
+  ["A major societal consideration in biotechnology is:",["Ethical, environmental and safety implications","Only packaging colour","Only laboratory furniture","Only microscope size"],0],
+  // Unit II: 30
+  ["A cell is commonly described as the:",["Basic structural and functional unit of life","Smallest organ","Largest tissue","Non-living particle"],0],
+  ["Microbiology is the study of:",["Microorganisms","Minerals","Planets","Weather"],0],
+  ["Bacteria are generally:",["Prokaryotic organisms","Multicellular animals","Acellular particles","Plants with chloroplasts"],0],
+  ["Yeast belongs to which group?",["Fungi","Bacteria","Viruses","Protozoa"],0],
+  ["Amoeba is an example of:",["Protozoan","Bacterium","Mould","Virus"],0],
+  ["Many microscopic algae are:",["Photosynthetic microorganisms","Non-living minerals","Animal tissues","Viruses"],0],
+  ["Viruses are called acellular because they:",["Lack cellular organization","Have a nucleus","Contain mitochondria","Divide by mitosis"],0],
+  ["Who is strongly associated with experiments supporting germ theory and pasteurization?",["Louis Pasteur","Gregor Mendel","Charles Darwin","Robert Brown"],0],
+  ["Robert Koch is well known for:",["Work linking specific microbes with diseases","Discovering penicillin","Inventing PCR","Discovering DNA structure"],0],
+  ["A pure culture contains:",["A single type of microorganism","Many unrelated species by definition","Only viruses and fungi","No living cells"],0],
+  ["A culture medium provides microorganisms with:",["Nutrients and suitable growth conditions","Only sunlight","Only dry air","No water"],0],
+  ["In aerobic fermentation, oxygen:",["Is supplied or made available for aerobic metabolism","Must always be absent","Is the carbon source","Replaces all nutrients"],0],
+  ["Industrial fermentation commonly uses a:",["Bioreactor","Telescope","Seismograph","Centrifugal pump only"],0],
+  ["A bioreactor is designed to:",["Provide controlled conditions for biological production","Store sequence files","Observe stars","Measure rainfall"],0],
+  ["The impeller in a stirred-tank bioreactor mainly provides:",["Mixing","DNA sequencing","Sterilization by radiation","Protein coding"],0],
+  ["A sparger is used to:",["Introduce gas into a liquid culture","Remove chromosomes","Measure pH directly","Separate DNA bases"],0],
+  ["Which parameter is commonly monitored in a bioreactor?",["pH","Notebook size","Wall colour","Desk height"],0],
+  ["Sterilization of fermentation equipment helps to:",["Prevent contamination","Increase contamination","Remove product genes","Stop mixing"],0],
+  ["Yeast fermentation of sugars can produce:",["Ethanol and carbon dioxide","Oxygen and nitrogen","DNA and RNA only","Starch and cellulose"],0],
+  ["Penicillin was originally obtained from a:",["Fungus of the genus Penicillium","Mammal","Green alga","Virus"],0],
+  ["Which is a microbial fermentation product?",["Citric acid","Granite","Glass","Aluminium foil"],0],
+  ["Downstream processing refers broadly to:",["Recovery and purification of a product after production","Selection of a university","DNA replication inside a cell","Plant pollination"],0],
+  ["Chromatography is mainly used to:",["Separate components of a mixture","Amplify DNA","Count cells only","Produce ATP"],0],
+  ["In chromatography, the stationary phase:",["Remains fixed in place","Always moves with solvent","Must be a gas","Is always a microorganism"],0],
+  ["The mobile phase in chromatography:",["Moves through or over the stationary phase","Never moves","Is always solid","Is the sample label"],0],
+  ["In paper chromatography, separation occurs because components:",["Move at different rates due to differing interactions","All travel exactly the same distance","Are converted into DNA","Are destroyed by paper"],0],
+  ["Rf value is calculated as:",["Distance travelled by solute divided by distance travelled by solvent front","Solvent distance divided by sample mass","Sample volume divided by time","Mass multiplied by temperature"],0],
+  ["HPLC stands for:",["High-Performance Liquid Chromatography","High Protein Lipid Count","Human Polymerase Lab Control","High Pressure Light Counting"],0],
+  ["Which technique separates molecules based partly on size using a porous matrix?",["Size-exclusion chromatography","Paper chromatography only","PCR","Gram staining"],0],
+  ["Aseptic technique is used to:",["Avoid unwanted microbial contamination","Increase contamination","Change the organism's species","Replace nutrients"],0],
+  // Unit III: 30
+  ["Bioinformatics combines biology with:",["Computing and information analysis","Geology only","Astronomy only","Civil engineering only"],0],
+  ["A biological database is used to:",["Store, organize and retrieve biological information","Grow bacteria directly","Sterilize glassware","Measure room temperature"],0],
+  ["GenBank primarily stores:",["Nucleotide sequence data","Only protein 3D structures","Weather records","Microscope images only"],0],
+  ["UniProt is a major resource for:",["Protein sequence and functional information","Only nucleotide submissions","Satellite images","Clinical billing"],0],
+  ["The Protein Data Bank (PDB) stores:",["Three-dimensional structures of biological macromolecules","Only DNA text files","Weather data","Patient records"],0],
+  ["A genome is:",["The complete genetic material of an organism","One amino acid","A cell organelle","A type of enzyme"],0],
+  ["A gene is best described as:",["A DNA sequence contributing to a functional product","A complete organism","A lipid droplet","A type of microscope"],0],
+  ["Sequence alignment is used to:",["Compare DNA, RNA or protein sequences","Separate cells by colour","Measure blood pressure","Sterilize cultures"],0],
+  ["BLAST is used to:",["Search sequence databases for similar sequences","Amplify proteins","Sterilize laboratory benches","Measure pH"],0],
+  ["A SNP is a variation at:",["A single nucleotide position","An entire organ","A whole species","A complete ecosystem"],0],
+  ["Comparative genomics involves:",["Comparing genome features across organisms","Comparing laboratory furniture","Counting only visible cells","Measuring enzyme pH"],0],
+  ["Gene prediction aims to identify:",["Likely genes within genomic sequences","The age of a rock","The colour of a protein","The pH of a culture"],0],
+  ["FASTA format commonly represents:",["Biological sequence data","Laboratory invoices","Microscope settings","Fermentation recipes"],0],
+  ["In a FASTA file, a sequence record commonly begins with:",["A greater-than symbol (>) in the header line","An ampersand (&)","A percentage sign (%)","A question mark (?)"],0],
+  ["The Human Genome Project aimed to:",["Determine and analyse the human genome sequence","Create the first microscope","Invent fermentation","Sequence every human protein structure"],0],
+  ["Genome sequencing determines:",["The order of nucleotides in DNA","The order of amino acids in every protein directly","The number of organs","The colour of chromosomes"],0],
+  ["A nucleotide database contains records of:",["DNA or RNA sequences","Only lipid structures","Only cell photographs","Only fermentation products"],0],
+  ["A protein database may include:",["Protein sequences and functional annotations","Only weather forecasts","Only bacterial colony images","Only nucleotide primers"],0],
+  ["A structure database is especially useful for studying:",["Three-dimensional molecular structure","Only organism population size","Only growth temperature","Only cell colour"],0],
+  ["Database retrieval means:",["Searching and obtaining relevant stored records","Destroying the database","Growing microbes in a flask","Purifying enzymes"],0],
+  ["A sequence accession number is used to:",["Uniquely identify a database record","Measure sequence length in grams","Name a microscope","Indicate pH"],0],
+  ["In sequence alignment, identical positions are often called:",["Matches","Spargers","Promoters only","Codons only"],0],
+  ["A conserved sequence region is one that:",["Remains relatively similar across organisms or sequences","Changes randomly in every organism","Contains no nucleotides","Exists only in lipids"],0],
+  ["A genome similarity search can help infer:",["Possible evolutionary or functional relationships","The colour of an organism","The exact age of every cell","The mass of a laboratory"],0],
+  ["A mutation is:",["A change in genetic sequence","A type of microscope","A culture medium","A protein purification column"],0],
+  ["Which is a possible effect of a SNP?",["It may influence a trait or disease risk","It always causes death","It always changes every protein","It removes the entire genome"],0],
+  ["Comparative genomics can identify:",["Conserved genes and genomic regions","Only laboratory contamination","Only cell membrane thickness","Only enzyme optimum pH"],0],
+  ["Which is a common sequence alphabet for DNA?",["A, T, G and C","A, U, G and C only","Amino acid names only","P, Q, R and S"],0],
+  ["RNA uses which base instead of thymine?",["Uracil","Guanine","Cytosine","Adenine"],0],
+  ["An important use of bioinformatics tools is to:",["Analyse biological sequences and datasets","Replace all laboratory experiments","Create living cells from computer code alone","Sterilize culture media"],0]
+];
+const ACCESS_CODE = "NITIN-2026";
+const questionBank = [...questions.map((q,i)=>({...q,topic:i<7?"Biotechnology fundamentals":i<20?"Biomolecules & enzymes":i<31?"Microbiology & fermentation":i<36?"Chromatography":"Bioinformatics & genomics"})), ...additionalQuestions.map((q,i)=>({...q,topic:i<7?"Biotechnology fundamentals":i<40?"Biomolecules & enzymes":i<60?"Microbiology & fermentation":i<70?"Chromatography":"Bioinformatics & genomics"}))];
+let current=0, answers=Array(100).fill(null), remaining=120*60, timer=null, finished=false, student="",startedAt=null;
+const $=id=>document.getElementById(id);
+function shuffle(items){const copy=[...items];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]]}return copy}
+function prepareTest(){
+ questions=shuffle(questionBank).slice(0,100).map(q=>{
+  const options=shuffle(q[1].map((text,index)=>({text,index})));
+  return [q[0],options.map(option=>option.text),options.findIndex(option=>option.index===q[2]),q.topic];
+ });
+ answers=Array(questions.length).fill(null);current=0;remaining=120*60;finished=false;
+}
+function render(){
+ const q=questions[current];$("qnumber").textContent=`Question ${current+1} of ${questions.length}`;$("question").textContent=q[0];
+ $("options").innerHTML="";
+ q[1].forEach((opt,i)=>{const lab=document.createElement("label");lab.className="option";const radio=document.createElement("input");radio.type="radio";radio.name="answer";radio.checked=answers[current]===i;radio.addEventListener("change",()=>{answers[current]=i;renderNav()});const span=document.createElement("span");span.textContent=String.fromCharCode(65+i)+". "+opt;lab.append(radio,span);$("options").append(lab)});
+ $("prev").disabled=current===0;$("next").textContent=current===questions.length-1?"Review last question":"Save & next →";renderNav();$("progressBar").style.width=(answers.filter(x=>x!==null).length/questions.length*100)+"%";
+}
+function renderNav(){const nav=$("nav");nav.innerHTML="";answers.forEach((a,i)=>{const b=document.createElement("button");b.textContent=i+1;if(a!==null)b.classList.add("answered");if(i===current)b.classList.add("current");b.onclick=()=>{current=i;render()};nav.append(b)});$("answeredCount").textContent=answers.filter(x=>x!==null).length+" / "+questions.length+" answered"}
+function updateTimer(){const m=Math.floor(remaining/60),s=remaining%60;$("timer").textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");if(remaining<=0){finish("Time limit reached. Your test was automatically submitted.");return}remaining--}
+function start(){student=$("student").value.trim();const accessCode=$("accessCode").value.trim().toUpperCase();if(!student){alert("Please enter your name.");return}if(accessCode!==ACCESS_CODE){alert("Invalid access code. Please enter the code provided by the teacher.");$("accessCode").focus();return}prepareTest();startedAt=Date.now();$("studentLabel").textContent=student;$("welcome").classList.add("hidden");$("results").classList.add("hidden");$("exam").style.display="block";render();updateTimer();timer=setInterval(updateTimer,1000)}
+function finish(reason="You submitted the test."){if(finished)return;finished=true;clearInterval(timer);$("exam").style.display="none";$("results").classList.remove("hidden");const correct=answers.filter((a,i)=>a===questions[i][2]).length;const wrong=answers.filter((a,i)=>a!==null&&a!==questions[i][2]).length;const skipped=questions.length-correct-wrong;const score=correct*2-wrong*.5;const percentage=score/2;const attempted=correct+wrong;const failed=reason.startsWith("TAB_SWITCH");const passed=!failed&&percentage>=40;const grade=failed?"F":percentage>=90?"A+":percentage>=80?"A":percentage>=70?"B":percentage>=60?"C":percentage>=50?"D":"F";$("resultTitle").textContent=failed?"FAILED — Exam integrity violation":"Test submitted";$("score").textContent=score.toFixed(1);$("correctCount").textContent=correct;$("wrongCount").textContent=wrong;$("skipCount").textContent=skipped;$("percent").textContent=percentage.toFixed(1)+"%";$("grade").textContent=grade;$("accuracy").textContent=(attempted?correct/attempted*100:0).toFixed(1)+"%";$("passStatus").className="notice "+(passed?"pass":"fail");$("passStatus").textContent=failed?"Status: FAIL — Exam integrity violation":`Status: ${passed?"PASS":"FAIL"} — Passing marks: 40%`;$("resultMeta").textContent=`Student: ${student} · Duration used: ${Math.floor((Date.now()-startedAt)/60000)} min · Series: New randomized set`;renderTopicReport();if(failed){$("failureReason").classList.remove("hidden");$("failureReason").textContent="Automatic failure: browser tab/window visibility changed during the examination. "+reason.slice(11)}else if(reason!=="You submitted the test."){$("failureReason").classList.remove("hidden");$("failureReason").textContent=reason}
+ $("reviewBtn").onclick=()=>{const box=$("review");box.classList.toggle("hidden");$("reviewList").innerHTML="";questions.forEach((q,i)=>{const d=document.createElement("div");d.className="review";const your=answers[i]===null?"Not attempted":q[1][answers[i]];const ok=answers[i]===q[2];d.innerHTML=`<b>Q${i+1}. ${q[0]}</b><p class="${ok?"correct":answers[i]===null?"muted":"wrong"}">Your answer: ${escapeHtml(your)} ${ok?"✓":""}</p><p class="correct">Correct answer: ${escapeHtml(q[1][q[2]])}</p>`;$("reviewList").append(d)})};
+}
+function renderTopicReport(){const topics=[...new Set(questions.map(q=>q[3]))];$("topicReport").innerHTML=topics.map(topic=>{const indexes=questions.map((q,i)=>q[3]===topic?i:-1).filter(i=>i>=0);const correct=indexes.filter(i=>answers[i]===questions[i][2]).length;const wrong=indexes.filter(i=>answers[i]!==null&&answers[i]!==questions[i][2]).length;const attempted=correct+wrong;return `<div class="reportrow"><strong>${escapeHtml(topic)}</strong><span>${correct}/${indexes.length}</span><span>${wrong}</span><span>${(attempted?correct/attempted*100:0).toFixed(0)}%</span></div>`}).join("")}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function downloadReport(){const status=$("passStatus").textContent;const report=`<!doctype html><html><head><meta charset="utf-8"><title>Nitin Test Series Report</title><style>body{font:15px Arial;color:#172033;max-width:850px;margin:40px auto;padding:0 20px}h1{color:#1743aa;border-bottom:3px solid #2457d6;padding-bottom:12px}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.card{background:#f4f7fb;border:1px solid #dfe6f1;border-radius:10px;padding:14px}.status{padding:14px;border-radius:10px;background:${status.includes("PASS")?"#e8f7ef":"#fff0f0"};font-weight:bold;margin:20px 0}.reportrow{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;padding:10px 0;border-bottom:1px solid #e2e8f0}@media(max-width:600px){.summary{grid-template-columns:1fr 1fr}}</style></head><body><h1>Nitin Test Series</h1><p>Introduction to Biotechnology</p><p><b>Student:</b> ${escapeHtml(student)}</p><div class="status">${escapeHtml(status)}</div><div class="summary"><div class="card"><b>Score</b><br>${$("score").textContent}/200</div><div class="card"><b>Percentage</b><br>${$("percent").textContent}</div><div class="card"><b>Grade</b><br>${$("grade").textContent}</div><div class="card"><b>Accuracy</b><br>${$("accuracy").textContent}</div></div><h2>Topic-wise report</h2>${$("topicReport").innerHTML}</body></html>`;const blob=new Blob([report],{type:"text/html"});const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download=`Nitin-Test-Report-${student.replace(/[^a-z0-9]+/gi,"-")||"student"}.html`;link.click();URL.revokeObjectURL(link.href)}
+$("start").onclick=start;$("prev").onclick=()=>{if(current>0){current--;render()}};$("next").onclick=()=>{if(current<questions.length-1){current++;render()}};$("submit").onclick=()=>{if(confirm("Submit your examination now? You cannot return to the questions."))finish()};$("printBtn").onclick=()=>window.print();$("downloadBtn").onclick=downloadReport;$("newTestBtn").onclick=()=>{$("results").classList.add("hidden");$("welcome").classList.remove("hidden");$("student").value=student;$("accessCode").value=""};
+document.addEventListener("visibilitychange",()=>{if(!finished&&startedAt!==null&&document.hidden)finish("TAB_SWITCHThe page became hidden. The browser detected a tab switch or window minimization.")});
+window.addEventListener("blur",()=>{if(!finished&&startedAt!==null){/* Deliberately not auto-failing on blur: browser/OS focus changes can be false positives. Visibility change is the primary rule. */}});
+</script>
+</body></html>
